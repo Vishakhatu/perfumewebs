@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fresh.css">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <a class="menu-icon" href="#">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+      </svg>
+    </a>
+    <img class="logo" src="bellavita-removebg-preview.png" />
+    <div class="header-menu">
+      <a href="home.html">Home</a>
+      <a href="abc.html">Body mist</a>
+      <a href="ekta.html">Fragrances</a>
+    </div>
+    <div class="header-icons">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <a href="signin.html">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M437.02 330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521 243.251 404 198.548 404 148 404 66.393 337.607 0 256 0S108 66.393 108 148c0 50.548 25.479 95.251 64.262 121.962-36.21 12.495-69.398 33.136-97.281 61.018C26.629 379.333 0 443.62 0 512h40c0-119.103 96.897-216 216-216s216 96.897 216 216h40c0-68.38-26.629-132.667-74.98-181.02zM256 256c-59.551 0-108-48.448-108-108S196.449 40 256 40s108 48.448 108 108-48.449 108-108 108z"/>
+        </svg>
+    </a>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.955 208.955" width="24px" height="24px">
+      <path d="M190.85 200.227L178.135 58.626a7.5 7.5 0 00-7.47-6.829h-26.221V39.971c0-22.04-17.93-39.971-39.969-39.971-22.038 0-39.966 17.931-39.966 39.971v11.826H38.27a7.5 7.5 0 00-7.47 6.829L18.035 200.784a7.5 7.5 0 007.47 8.17h157.946a7.5 7.5 0 007.399-8.727z" 
+      fill="none" stroke="black" stroke-width="20"/> <!-- No fill and a black border -->
+  </svg>
+    </div>
+  </div>
+
+
+
+<!-- Main Product Section -->
+<div class="container mt-4">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6">
+            <div class="position-relative">
+                <img src="rose-removebg-preview (1).png" alt="Product Image" class="img-fluid">
+                <i class="far fa-heart position-absolute top-0 start-0 p-2 fs-4"></i> <!-- Heart icon -->
+            </div>
+        </div>
+        
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <h2 class="fw-bold">ROSE Woman
+                EAU DE PARFUM</h2>
+            <h3 class="text-primary fw-bold">₹515.00</h3>
+            <p>An iconic bouquet of rose, jasmine and peach, capturing the essence of classic romance.
+                The Rose Woman Eau De Parfum essentially changes the way you think about roses forever! The woody Rose evolves singularly in the field of floral peach, jasmine and amber, breathing excitement and contentment! The aromatic perfume unfolds into the whiff of medieval England as pink pepper comes in contact with citrusy orange. Heart notes of woody rose mirrors true and classic romance, gently seducing base notes of Vanilla and Musk to evolve for a blooming ever after!</p>
+            
+            <label for="quantity" class="form-label">Quantity</label>
+            <select class="form-select" id="quantity">
+                <option selected>Value</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            
+            <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+            
+            <div class="mt-4">
+                <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#disclaimer">Disclaimer</button>
+                <div id="disclaimer" class="collapse">
+                    Despite our attempts to provide you with the most accurate information possible, the actual packaging, ingredients, and color of the product may sometimes vary. Please read the label, directions, and warnings carefully before use.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Reviews -->
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">It is Refreshing!!!!!!!!!!</h5>
+                    <p class="card-text">I have been using it since 4 days..</p>
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="ms-2">
+                            <p class="mb-0">Anjali Deshmukh</p>
+                            <small class="text-muted">21/09/2024</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">The overall it is good....</h5>
+                    <p class="card-text">It has mild sweet smell...#Good</p>
+                    <div class="d-flex align-items-center">
+                       
+                        <div class="ms-2">
+                            <p class="mb-0">Angelina D'Souza</p>
+                            <small class="text-muted">26/08/2024</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">It is worth for cost.</h5>
+                    <p class="card-text">It is literally worth for cost......</p>
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="ms-2">
+                            <p class="mb-0">Kalyani Raut</p>
+                            <small class="text-muted">12/05/2024</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

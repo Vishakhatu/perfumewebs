@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        /* Styling for the body with a gradient background */
+
+/* Container with optional gradient overlay */
+.sev {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(203, 255, 253, 0.353));
+    padding: 20px;
+    border-radius: 10px; /* Optional: To give a smooth rounded edge to your container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow to make the container stand out */
+}
+
+/* Header and other styling remain unchanged */
+.logo img {
+    max-height: 200px;
+    width: 300px;
+}
+
+#search {
+    width: 500px;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    background: url('th.jpg') no-repeat right 10px center;
+    background-size: 20px;
+    background-color: aliceblue;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    width: 100%;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(72, 72, 70, 0.25);
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--beach-bg);
+    z-index: 6;
+}
+
+@media (max-width: 575px) {
+    .header {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+    }
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 740px) {
+    .header-menu {
+        display: none;
+    }
+}
+
+.header-menu a:not(:first-child) {
+    margin-left: 30px;
+}
+
+.header .menu-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header .menu-icon svg {
+    width: 22px;
+}
+.header-icons a {
+    margin-right: 15px; /* Add margin to create space between icons */
+}
+
+.header-icons svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+.header-icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-icons svg  {
+    width: 15px;
+}
+
+.header-icons svg:not(:last-child) {
+    margin-right: 10px;
+}
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #14545a;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-bar {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Body mist section with background */
+        .body-mist-section {
+            height: 50vh; /* Cover half the viewport height */
+            background: linear-gradient(to bottom right, rgba(64, 14, 14, 0.537), rgba(0, 0, 0, 0.559)), 
+                url("https://img.freepik.com/premium-photo/bottle-luxury-perfume-surrounded-by-peonies-top-view_118631-4495.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .body-mist-section h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        
+        .product-grid {
+            display: flex;
+            align-items: flex-start;
+            gap:10px; /* Reduced gap between boxes */
+        }
+        
+        .product-box {
+            width: calc(33.333% - 10px); /* Adjusted width to compensate for the reduced gap */
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        
+        
+        .product-box img {
+            width: 100%;
+            border-radius: 10px;
+            
+        }
+        .product-title {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .product-price {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .add-to-cart-btn {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #333;
+        }
+        #search-bar {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-size: 14px;
+            background-color: white;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* When search bar is active */
+        #search-bar.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="sev">
+            <!-- Header -->
+            <div class="header">
+                <img class="logo" src="bellavita-removebg-preview.png" alt="Bellavita Logo"/>
+                <div class="header-menu">
+                    <a href="home.html">Home</a>
+                    <a href="abc.html">Body mist</a>
+                    <a href="ekta.html">Fragrances</a>
+                </div>
+                <div class="header-icons">
+                    <!-- Search Icon -->
+                    <svg id="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+    <!-- Search Bar (Initially Hidden) -->
+     <input type="text" id="search-bar" placeholder="Search for products...">
+    <!-- Account and Cart Icons -->
+                    <a href="signin.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M437.02 330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521 243.251 404 198.548 404 148 404 66.393 337.607 0 256 0S108 66.393 108 148c0 50.548 25.479 95.251 64.262 121.962-36.21 12.495-69.398 33.136-97.281 61.018C26.629 379.333 0 443.62 0 512h40c0-119.103 96.897-216 216-216s216 96.897 216 216h40c0-68.38-26.629-132.667-74.98-181.02zM256 256c-59.551 0-108-48.448-108-108S196.449 40 256 40s108 48.448 108 108-48.449 108-108 108z"/>
+                        </svg>
+                    </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.955 208.955" width="24px" height="24px">
+                        <path d="M190.85 200.227L178.135 58.626a7.5 7.5 0 00-7.47-6.829h-26.221V39.971c0-22.04-17.93-39.971-39.969-39.971-22.038 0-39.966 17.931-39.966 39.971v11.826H38.27a7.5 7.5 0 00-7.47 6.829L18.035 200.784a7.5 7.5 0 007.47 8.17h157.946a7.5 7.5 0 007.399-8.727z" 
+                        fill="none" stroke="black" stroke-width="20"/> <!-- No fill and a black border -->
+                    </svg>
+                </div>
+            </div>
+        </div>
+    
+        
+        <!-- Body Mist Section with background -->
+        <div class="body-mist-section" style="color: rgb(216, 173, 196);">
+            <h2>Discover the Essence of Luxury, One Scent at a Time."</h2>
+        </div>
+
+        <div class="header">
+            <h2>Our Products</h2>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <img src="https://images-cdn.ubuy.co.in/667f053c54b03505b8208128-bella-vita-luxury-woman-eau-de-parfum.jpg" alt="Product Image" >
+                <div class="product-title">Perfumes</div>
+                <div class="product-title">GET EXCITING COMBOS</div>
+                
+                <div class="product-price">₹319.00</div>
+                
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-box">
+                <img src="Screenshot 2024-09-23 204227.png" alt="Product Image">
+                <div class="product-title"> Body Mist, 150ml</div>
+                <div class="product-title"> Get combo</div>
+                <div class="product-price">₹2,499.00</div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+        <div class="product-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ24ljIBipRq4xkh-jRXHbtZshyEORW9ET5qw&s" alt="Product Image">
+            <div class="product-title">Pure Seduction Cashmere deodarant, 150ml</div>
+            <div class="product-title">Get combo</div>
+            <div class="product-price">₹2,499.00</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        </div>
+        
+    </div>
+    </div>
+ <script src="abcde.js"></script>
+</body>
+</html>
